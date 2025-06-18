@@ -1,0 +1,98 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import Head from "next/head";
+
+export default function AgrotyneWebsite() {
+  return (
+    <div className="bg-gray-100 text-gray-800 font-sans min-h-screen">
+      <Head>
+        <title>Agrotyne | Organic Agritech Consultancy</title>
+        <meta
+          name="description"
+          content="Agrotyne is a modern agritech consultancy specializing in indoor farming, greenhouse design, and sustainable organic solutions."
+        />
+        <meta name="keywords" content="Agrotech, Organic Farming, Indoor Farming, Greenhouse, Vertical Farming, Consultancy" />
+      </Head>
+
+      <header className="bg-green-700 text-white p-6 shadow-md">
+        <nav className="flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold">Agrotyne</h1>
+            <p className="text-sm">Minimal Land, Maximum Yield - Organically</p>
+          </div>
+          <ul className="flex space-x-6 text-white text-sm">
+            <li><a href="#about" className="hover:underline">About</a></li>
+            <li><a href="#services" className="hover:underline">Services</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className="p-6 space-y-10 animate-fade-in">
+        {/* About Section */}
+        <section id="about" className="space-y-4">
+          <h2 className="text-2xl font-semibold text-green-800">About Us</h2>
+          <Card className="bg-white shadow">
+            <CardContent className="p-4">
+              <p>
+                Agrotyne is a cutting-edge agritech consultancy focused on modern, organic
+                farming solutions like indoor farming and greenhouse setups. We help
+                farmers and agricultural businesses optimize land use and maximize yield
+                sustainably.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="space-y-4">
+          <h2 className="text-2xl font-semibold text-green-800">Our Services</h2>
+          <Card className="bg-white shadow">
+            <CardContent className="p-4 space-y-2">
+              <ul className="list-disc pl-5">
+                <li>Indoor Farming Consultancy</li>
+                <li>Greenhouse Design & Setup</li>
+                <li>Organic Crop Planning</li>
+                <li>Soil-less Farming Techniques</li>
+                <li>Vertical Farming Strategies</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="space-y-4">
+          <h2 className="text-2xl font-semibold text-green-800">Contact Us</h2>
+          <Card className="bg-white shadow">
+            <CardContent className="p-4 space-y-4">
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Name</label>
+                  <Input type="text" placeholder="Your Name" className="w-full" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Email</label>
+                  <Input type="email" placeholder="you@example.com" className="w-full" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Message</label>
+                  <Textarea placeholder="Tell us how we can help..." rows={4} className="w-full" />
+                </div>
+                <Button className="bg-green-700 text-white hover:bg-green-800">
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </section>
+      </main>
+
+      <footer className="bg-gray-200 text-center p-4 mt-10 text-sm text-gray-600">
+        © 2025 Agrotyne. All rights reserved.
+      </footer>
+    </div>
+  );
+}
